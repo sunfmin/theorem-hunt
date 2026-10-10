@@ -27,6 +27,18 @@ Writing the sentence is most of the value. A claim that reads fine as prose, suc
 "moving it back gives what you started with", often turns out false once P has to be
 spelled out.
 
+## When a proposition deserves a proof
+
+Only when all three hold:
+
+1. **It can be stated exactly in one sentence.**
+2. **A violation is expensive, or would be hard to notice.**
+3. **There are too many cases for tests to cover.**
+
+Most code fails the second or third, and then a property test is enough. Apply these
+three to every candidate before calling it a proof candidate; `techniques/routing.md`
+adds the conditions on the code itself.
+
 ## Process
 
 1. **Fix the scope.** Use the path or module the user named. For a whole codebase,
@@ -110,7 +122,8 @@ End with the three things to do first and the reason for each.
   session. An installed binary may be older than the source you read; say which
   version you ran.
 - **Do not recommend a proof where a test would do.** A proof costs several times the
-  code it covers.
+  code it covers. Every entry under Prove says how it meets each of the three
+  conditions above.
 
 ## Before stopping
 
